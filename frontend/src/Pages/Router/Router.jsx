@@ -1,0 +1,47 @@
+import React from 'react'
+import Sidebar from '../../Components/Sidebar/Sidebar'
+import { Route, Routes, useLocation } from 'react-router-dom'
+import HomePage from '../Home/HomePage'
+import Profile from '../Profile/Profile' 
+import Auth from '../Auth/Auth'
+import Story from '../Story/Story'
+
+const Router = () => {
+
+    const location = useLocation();
+
+  return (
+    <div  >
+
+        {(location.pathname !=="/login" && location.pathname !== "/signup")   &&  (
+        <div className='flex  '>
+            <div className='w-[20%] min-w-[13rem] pl-5 lg:pl-10 border border-1-slate-500 '>
+                <Sidebar/>
+            </div>
+
+            <div className='w-full'>
+                <Routes>
+                    <Route path='/' element={<HomePage/>}> </Route>
+                    <Route path='/username' element={<Profile/>}> </Route>
+                    <Route  path="/story" element={<Story/>}></Route>
+                </Routes>
+
+            </div> 
+        </div>)}
+
+
+        {(location.pathname ==="/login" || location.pathname === "/signup") && (
+        <div >
+            <Routes>
+                <Route path='/login' element={<Auth/>}> </Route>
+                <Route path='/signup' element={<Auth/>}> </Route>
+            </Routes>
+
+        </div>)}
+
+
+    </div>
+  )
+}
+
+export default Router
