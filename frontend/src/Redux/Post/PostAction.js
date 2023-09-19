@@ -1,7 +1,5 @@
-import { DELETE_POST, GET_SINGLE_POST, GET_USER_POST, LIKE_POST, REQ_USER_POST, SAVE_POST, UNLIKE_POST, UNSAVE_POST } from "./PostActionType";
-import {
-    CREATE_NEW_POST, 
-  } from "./postActionTypes";
+import { CREATE_NEW_POST,DELETE_POST, GET_SINGLE_POST, GET_USER_POST, LIKE_POST, REQ_USER_POST, SAVE_POST, UNLIKE_POST, UNSAVE_POST } from "./PostActionType";
+ 
   
   const BASE_URL = "http://localhost:8080/api/post";
   
