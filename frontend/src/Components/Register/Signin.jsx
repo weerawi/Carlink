@@ -16,8 +16,8 @@ export const Signin = () => {
   const initialValues = { email: "", password: "" }; 
   const dispatch=useDispatch(); 
 
-  // const {user} = useSelector(store=>store);
-  // const jwt=localStorage.getItem("token");
+  const {user} = useSelector(store=>store);
+  const jwt=localStorage.getItem("token");
 
   const handleSubmit = (values, formikProps) => {
     dispatch(signinAction(values))
@@ -26,16 +26,16 @@ export const Signin = () => {
  
   
 
-  // useEffect(() => {
-  //   if(jwt) dispatch(getUserProfileAction(jwt));
-  // },[jwt ]);
+  useEffect(() => {
+    if(jwt) dispatch(getUserProfileAction(jwt));
+  },[jwt ]);
 
 
-  // useEffect(() => {
-  //   if(user.reqUser?.username){
-  //     navigate(`/${user.reqUser.username}`)
-  //   }
-  // },[jwt,user.reqUser]);
+  useEffect(() => {
+    if(user.reqUser?.username){
+      navigate(`/${user.reqUser.username}`)
+    }
+  },[jwt,user.reqUser]);
 
   // to navigate to signup function create
   const navigate= useNavigate();
