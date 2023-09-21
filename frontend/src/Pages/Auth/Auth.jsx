@@ -4,13 +4,9 @@ import Singin from '../../Components/Register/Signin'
 import { Signup } from '../../Components/Register/Signup'
 import { useLocation } from 'react-router-dom'
 import insta_logo from '../../images/logoinsta.png';
-import fb from '../../images/fb.png';
-import appstore from '../../images/app.png';
-import playstore from '../../images/play.png';
+import fb from '../../images/fb.png'; 
 
-const Auth = () => {
-
-
+const Auth = () => { 
   // for changing the pathname signin or singup in this component
   const location = useLocation();
   const [isLogin, setIsLogin] = useState(true);
@@ -18,16 +14,16 @@ const Auth = () => {
 
   const changeLogin = () => {
     setIsLogin(prevIsLogin => !prevIsLogin);
-}
+  }
 
 
   return (
     
 
-    <div className='text-sm flex h-[100vh] my-20 justify-center items-center'>
+    <div className='text-sm flex h-[100vh] my-5 justify-center items-center'>
         <div className='flex flex-col  md:flex-row space-x-3 '>
 
-            <div className=' hidden  lg:block    '>
+            <div className=' hidden  lg:block my-auto   '>
                 <div className='h-[39rem] w-[23rem] relative '> 
               
                   <img   className='w-auto h-full ' src='/login.png'></img> 
@@ -36,7 +32,7 @@ const Auth = () => {
                 </div> 
             </div>
 
-            <div className='  '>  
+            <div className=' my-auto '>  
                 <div className='  border bg-white border-gray-600 p-2  '> 
                     <div className='bg-white flex justify-center mt-3'> 
                         <img className="w-[170px] md:w-[300px] mt-25" src={insta_logo} alt="Instagram Logo" />   
@@ -69,14 +65,14 @@ const Auth = () => {
                 </div> 
 
                 
-
+{/* 
                 <div className=" border border-gray-600 px-10  text-center mt-6 py-4">
                     Get the app.
                     <div className="mt-2 flex justify-between ">
                         <img src={appstore} alt="App Store" className="mr-1" width="136" />
                         <img src={playstore} alt="Play Store" className="mr-1" width="136" />
                     </div>
-                </div>
+                </div> */}
             </div>
         </div>
         
