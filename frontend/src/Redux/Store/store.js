@@ -3,7 +3,7 @@ import { AuthReducer } from "../Auth/Reducer";
 import {legacy_createStore,combineReducers,applyMiddleware} from "redux";
 import { UserReducer } from "../User/UserReducer";
 import { PostReducer } from "../Post/PostReducer";
-import { commentReducer } from "../Comment/CommentReduce";
+import { commentReducer } from "../Comment/CommentReducer";
 
 const rootReducer= combineReducers({
     auth:AuthReducer,

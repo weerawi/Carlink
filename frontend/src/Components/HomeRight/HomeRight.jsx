@@ -23,7 +23,8 @@ const HomeRight = () => {
           </div>
         </div>
 
-        <div className='space-y-5 mt-10'>
+        <div className='mt-5 flex justify-center text-gray-500'>Suggestion for you</div>
+        <div className='space-y-5 mt-5'>
           {[1,1,1,1,1].map((item)=><SuggetionCard/>)}
         </div>
       </div>

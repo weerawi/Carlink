@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import {IoReorderThreeOutline} from "react-icons/io5";
 import { mainu } from '../SidebarConfig';
 import { useNavigate } from 'react-router-dom';
@@ -8,13 +8,15 @@ import SearchComponents from '../Search/SearchComponents';
 
 const Sidebar = () => {
 
-    const [activeTab, setActiveTab] =  useState("");
+    const [activeTab, setActiveTab] =  useState(false);
     const navigate = useNavigate();
     const { isOpen, onOpen, onClose } = useDisclosure();
     const [isSearchVisible,setIsSearchVisible] = useState(false);
 
+ 
+
     const handleTabClick = (title) => {
-        setActiveTab(title);
+        setActiveTab(title); 
         if(title==="Profile"){
             navigate("/username")
             setIsSearchVisible(false);

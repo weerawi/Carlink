@@ -38,6 +38,6 @@ import { CREATE_NEW_POST, DELETE_POST, GET_SINGLE_POST, GET_USER_POST, LIKE_POST
     else if(type ===GET_SINGLE_POST){
         return {...store, singlePost:payload}
     } 
-     
+    return store;
   };
   

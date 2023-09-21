@@ -1,6 +1,8 @@
 .mobileWallpaper{
     background-image: url("https://images.pexels.com/photos/174938/pexels-photo-174938.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     animation: changeBg 8s infinite;
+    border-radius: 20px;
+    background-size: cover;
 }
 
 @keyframes changeBg {

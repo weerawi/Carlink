@@ -23,5 +23,5 @@ export const commentReducer = (store = initialValue, { type, payload }) => {
     else if(type ===UNLIKE_COMMENT){
         return {...store, unlikeComment:payload}
     } 
-     
+    return store;
   };

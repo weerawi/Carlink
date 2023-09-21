@@ -4,12 +4,15 @@ import { FaPhotoVideo } from 'react-icons/fa'
 import "./CreatePostModal.css"
 import { GrEmoji  } from  'react-icons/gr'
 import { GoLocation  } from  'react-icons/go'
+import { useDispatch  } from 'react-redux'
 
 const CreatePostModal = ({isOpen,onClose}) => {
 
     const [isDragOver, setIsDragOver] = useState(false);
     const [file,setFile] = useState();
     const [caption,setCaption] = useState("");
+    const dispatch = useDispatch();
+
 
     const handleDrop = (event) => {
         event.preventDefault();
@@ -43,10 +46,17 @@ const CreatePostModal = ({isOpen,onClose}) => {
         }
 
     }
-
+ 
     const handleCaptionChange = (e) => {
         setCaption(e.target.value);
     }
+    
+
+
+    // handle create post
+    // const handeleCreatePost=()=>{ 
+    // }
+
 
 
   return (
@@ -56,7 +66,9 @@ const CreatePostModal = ({isOpen,onClose}) => {
         <ModalContent> 
             <div className='flex justify-between py-1 px-10 items-center'>
                 <p>Create New Post</p>
-                <Button variant={"ghost"} size={'sm'} color={'blue'}>
+                <Button variant={"ghost"} size={'sm'} color={'blue'}
+                //  onClick={handleCreatePost}
+                 >
                     Share
                 </Button>
             </div> 
