@@ -26,6 +26,8 @@ export const Signup = () => {
     const dispatch = useDispatch();
     const {auth} = useSelector((store) => store);
     const toast = useToast();
+    const {user} = useSelector(store=>store);
+    const jwt=localStorage.getItem("eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjYXJsaW5rIiwiaWF0IjoxNjk1MjYzODU1LCJhdXRob3JpdGllcyI6IiIsInVzZXJuYW1lIjoidmlub2RAZ21haWwuY29tIiwiZXhwIjoxNjk1Mjk5ODU1fQ.UCcQ3CS_wHG_SpKoqA68ajOYS5QrKm-9s-R9CAUaGU2nPcYww1JhZ5mo5ia-a5hBiMUc8V31q8bJ9j0IqikVQA");
 
 
 
@@ -70,6 +72,13 @@ export const Signup = () => {
       }
     }, [auth.signup, navigate, toast]);
     
+
+
+    useEffect(() => {
+      if(user.reqUser?.username){
+        navigate(`/${user.reqUser?.username}`)
+      }
+    },[jwt,user.reqUser])
       
 
   return (

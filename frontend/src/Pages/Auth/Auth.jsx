@@ -27,7 +27,7 @@ const Auth = () => {
     <div className='text-sm flex h-[100vh] my-20 justify-center items-center'>
         <div className='flex flex-col  md:flex-row space-x-3 '>
 
-            <div className=' hidden  lg:block my-auto   '>
+            <div className=' hidden  lg:block    '>
                 <div className='h-[39rem] w-[23rem] relative '> 
               
                   <img   className='w-auto h-full ' src='/login.png'></img> 
