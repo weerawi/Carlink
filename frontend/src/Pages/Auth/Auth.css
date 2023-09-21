@@ -1,5 +1,5 @@
 .mobileWallpaper{
-    background-image: url("https://images.pexels.com/photos/174938/pexels-photo-174938.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-image: url("https://images.pexels.com/photos/919073/pexels-photo-919073.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     animation: changeBg 8s infinite;
     border-radius: 20px;
     background-size: cover;
@@ -13,9 +13,9 @@
         background-image: url("https://images.pexels.com/photos/3314294/pexels-photo-3314294.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     }
     50%{
-        background-image: url("https://images.pexels.com/photos/238480/pexels-photo-238480.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+        background-image: url("https://images.pexels.com/photos/9578505/pexels-photo-9578505.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     }
     75%{
-        background-image: url("https://images.pexels.com/photos/5082576/pexels-photo-5082576.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+        background-image: url("https://images.pexels.com/photos/2974246/pexels-photo-2974246.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
     }
 }

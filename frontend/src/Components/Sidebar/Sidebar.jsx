@@ -40,7 +40,7 @@ const Sidebar = () => {
             {<div>
 
                 {activeTab !== "Search" && <div className='pt-10'>
-                    <img className='w-40 ' src='https://i.imgur.com/zqpwkLQ.png' alt='instagram' />
+                    <img className='w-40 ' src='/pngwing.com.png' alt='instagram' />
                 </div>}
 
                 <div className='mt-10'>

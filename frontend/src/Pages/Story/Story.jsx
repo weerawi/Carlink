@@ -5,19 +5,19 @@ const Story = () => {
 
     const story = [
         { 
-            image: "https://images.pexels.com/photos/5184645/pexels-photo-5184645.jpeg?auto=compress&cs=tinysrgb&w=300"
+            image: "https://images.pexels.com/photos/733745/pexels-photo-733745.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         },
         { 
-            image: "https://images.pexels.com/photos/3099309/pexels-photo-3099309.jpeg?auto=compress&cs=tinysrgb&w=300"
+            image: "https://images.pexels.com/photos/3892898/pexels-photo-3892898.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         },
         { 
-            image: "https://images.pexels.com/photos/6805801/pexels-photo-6805801.jpeg?auto=compress&cs=tinysrgb&w=300"
+            image: "https://images.pexels.com/photos/5214413/pexels-photo-5214413.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         },
         { 
-            image: "https://images.pexels.com/photos/4405941/pexels-photo-4405941.jpeg?auto=compress&cs=tinysrgb&w=300"
+            image: "https://images.pexels.com/photos/2524767/pexels-photo-2524767.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         },
         { 
-            image: "https://images.pexels.com/photos/3889755/pexels-photo-3889755.jpeg?auto=compress&cs=tinysrgb&w=300"
+            image: "https://images.pexels.com/photos/919073/pexels-photo-919073.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
         },
     ]
   return (

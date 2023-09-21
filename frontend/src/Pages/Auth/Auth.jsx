@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import "./Auth.css" 
 import Singin from '../../Components/Register/Signin'
 import { Signup } from '../../Components/Register/Signup'
-import { useLocation } from 'react-router-dom'
-import insta_logo from '../../images/logoinsta.png';
+import { useLocation } from 'react-router-dom' 
 import fb from '../../images/fb.png'; 
+import { ToastContainer, toast } from 'react-toastify';
+
 
 const Auth = () => { 
   // for changing the pathname signin or singup in this component
@@ -16,11 +17,13 @@ const Auth = () => {
     setIsLogin(prevIsLogin => !prevIsLogin);
   }
 
+   
 
   return (
     
 
-    <div className='text-sm flex h-[100vh] my-5 justify-center items-center'>
+    <div className='text-sm bg-gray-200 flex h-[100vh]   justify-center items-center'>
+        <ToastContainer />
         <div className='flex flex-col  md:flex-row space-x-3 '>
 
             <div className=' hidden  lg:block my-auto   '>
@@ -34,22 +37,26 @@ const Auth = () => {
 
             <div className=' my-auto '>  
                 <div className='  border bg-white border-gray-600 p-2  '> 
-                    <div className='bg-white flex justify-center mt-3'> 
-                        <img className="w-[170px] md:w-[300px] mt-25" src={insta_logo} alt="Instagram Logo" />   
+                    <div className='bg-white flex flex-col justify-center items-center mt-3'> 
+                        <div>
+                          <img className="w-[120px] md:w-[150px] lg:w-[200px] mt-25" src='/pngwing.com.png' alt="Instagram Logo" />  
+                        </div>
+                         
+                        <div className='space-x-2'>CARLINK</div>
                     </div>
-                    <div className='my-2 flex justify-center items-center'>
+                    <div className='my-2 flex  justify-center items-center'>
                         
-                        <div className='  w-[50vw] lg:w-[23vw]'>
+                        <div className='text-sm  w-[50vw] lg:w-[20vw] md:w-[30vw]'>
                           {location.pathname==="/login" ? <Singin/> : <Signup/>} 
                         </div>
                             
                     </div>
 
                                                 
-                    <div className="flex justify-center my-5"> 
-                        <div className="w-full   border-t border-gray-300"></div>
-                        <div className="font-bold text-gray-600 mx-10">OR</div>
-                        <div className="w-full   border-t border-gray-300"></div>  
+                    <div className="flex relative justify-center my-7"> 
+                        <div className="w-full  mt-2  border-t border-gray-300"></div>
+                        <div className="font-bold  text-gray-600 px-5">OR</div>
+                        <div className="w-full  mt-2  border-t border-gray-300"></div>  
                     </div>
 
 
@@ -64,15 +71,7 @@ const Auth = () => {
       
                 </div> 
 
-                
-{/* 
-                <div className=" border border-gray-600 px-10  text-center mt-6 py-4">
-                    Get the app.
-                    <div className="mt-2 flex justify-between ">
-                        <img src={appstore} alt="App Store" className="mr-1" width="136" />
-                        <img src={playstore} alt="Play Store" className="mr-1" width="136" />
-                    </div>
-                </div> */}
+                 
             </div>
         </div>
         

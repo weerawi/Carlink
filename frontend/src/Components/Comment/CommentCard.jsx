@@ -6,7 +6,7 @@ const CommentCard = () => {
       <div>
         <div>
           <div>
-            <img className='w-9 h-9 rounded-full' src='https://cdn.pixabay.com/photo/2015/11/16/16/28/bird-1045954_640.jpg' alt='dogstory' />
+            <img className='w-9 h-9 rounded-full' src='https://images.pexels.com/photos/5214413/pexels-photo-5214413.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='dogstory' />
           </div>
 
           <div> 

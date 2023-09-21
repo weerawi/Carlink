@@ -70,7 +70,7 @@ export const Signin = () => {
                   {({field,form}) => (
                     <FormControl isInvalid={form.errors.password && form.touched.password}>
                       <Input
-                        className='w-full  mt-5'
+                        className='w-full  mt-2'
                         {...field}
                         id="password"
                         placeholder='Password' 
@@ -83,7 +83,7 @@ export const Signin = () => {
                 {/* <p className='text-center my-4 text-sm'>People who use our service may have upload contact information to Instagram. Learn More</p> */}
                 {/* <p className='text-center my-4 text-sm'>By Singing up,you agree to our Terms, Privacy and Cookies Policy.</p>  */}
 
-                <Button className='w-full' mt={4} colorScheme='blue' type='submit' isLoading={formikProps.isSubmitting}>
+                <Button className='w-full' mt={4} colorScheme='linkedin' type='submit' isLoading={formikProps.isSubmitting}>
                   Sign In
                 </Button>
 
@@ -93,7 +93,7 @@ export const Signin = () => {
         </Box>
       </div>
 
-      <div  className='border bg-gray-200 border-slate-300 mt-5'>
+      <div  className='border bg-gray-50 border-slate-300 mt-5'>
         <p className='text-center py-2'>If You Don't Have Account <span onClick={handelNavigate} className='ml-2 text-blue-600 cursor-pointer'>Sign Up</span></p>
       </div>
     </div>

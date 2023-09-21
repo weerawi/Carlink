@@ -4,7 +4,7 @@ const SuggetionCard = () => {
   return (
     <div className='flex justify-between items-center'>
         <div  className='flex items-center'> 
-          <img className='w-9 h-9 rounded-full ' src='https://cdn.pixabay.com/photo/2015/04/23/21/59/tree-736875_640.jpg' alt='dogstory' />
+          <img className='w-9 h-9 rounded-full ' src='https://images.pexels.com/photos/2405039/pexels-photo-2405039.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1' alt='dogstory' />
            
           <div className='ml-3'>
             <p className='test-sm font-semibold '>Full name</p>

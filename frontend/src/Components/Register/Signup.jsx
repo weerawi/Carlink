@@ -3,8 +3,7 @@ import { Box, Button, FormControl, FormErrorMessage, Input, useToast } from '@ch
 import { Field, Formik } from 'formik'
 import * as Yup from "yup"
 import { useNavigate } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
-import { store } from '../../Redux/Store/store'
+import { useDispatch, useSelector } from 'react-redux' 
 import { signupAction } from '../../Redux/Auth/Action'
 
 
@@ -24,20 +23,13 @@ export const Signup = () => {
 
 
     const dispatch = useDispatch();
-    const {auth} = useSelector((store) => store);
+    const { auth } = useSelector((store) => store);
+
     const toast = useToast();
     const {user} = useSelector(store=>store);
     const jwt=localStorage.getItem("eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjYXJsaW5rIiwiaWF0IjoxNjk1MjYzODU1LCJhdXRob3JpdGllcyI6IiIsInVzZXJuYW1lIjoidmlub2RAZ21haWwuY29tIiwiZXhwIjoxNjk1Mjk5ODU1fQ.UCcQ3CS_wHG_SpKoqA68ajOYS5QrKm-9s-R9CAUaGU2nPcYww1JhZ5mo5ia-a5hBiMUc8V31q8bJ9j0IqikVQA");
 
-
-
-    // const handleSubmit = async (values, formikProps) => {
-       
-    //     dispatch(signupAction(values))
-    //     console.log("values:", values); 
-    //     formikProps.setSubmitting(false);
-      
-    // };
+ 
 
 
     const handleSubmit = async (values, formikProps) => {
@@ -63,12 +55,17 @@ export const Signup = () => {
     useEffect(() => {
       if (auth.signup && auth.signup.username) {
         navigate("/login");
-        toast({
-          title: `Account Created. ${auth.signup.username}`,
-          status: "success",
-          duration: 5000,
-          isClosable: true,
-        });
+        toast.success('Sign up successful!', {
+          position: "top-right",
+          autoClose: 1000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+      });
+      console.log("success")
       }
     }, [auth.signup, navigate, toast]);
     
@@ -110,7 +107,7 @@ export const Signup = () => {
                   {({field,form}) => (
                     <FormControl isInvalid={form.errors.username && form.touched.username}>
                       <Input
-                        className='w-full mt-5'
+                        className='w-full mt-2'
                         {...field}
                         id="username"
                         placeholder='username'
@@ -124,7 +121,7 @@ export const Signup = () => {
                   {({field,form}) => (
                     <FormControl isInvalid={form.errors.name && form.touched.name}>
                       <Input
-                        className='w-full mt-5'
+                        className='  w-full mt-2'
                         {...field}
                         id="name"
                         placeholder='Name'
@@ -138,7 +135,7 @@ export const Signup = () => {
                   {({field,form}) => (
                     <FormControl isInvalid={form.errors.password && form.touched.password}>
                       <Input
-                        className='w-full  mt-5'
+                        className='w-full  mt-2'
                         {...field}
                         id="password"
                         placeholder='Password'
@@ -151,7 +148,7 @@ export const Signup = () => {
                 {/* <p className='text-center my-4 text-sm'>People who use our service may have upload contact information to Instagram. Learn More</p> */}
                 {/* <p className='text-center my-4 text-sm'>By Singing up,you agree to our Terms, Privacy and Cookies Policy.</p>  */}
 
-                <Button className='w-full' mt={4} colorScheme='blue' type='submit' isLoading={formikProps.isSubmitting}>
+                <Button className='w-full' mt={4} colorScheme='linkedin' type='submit' isLoading={formikProps.isSubmitting}>
                   Sign Up
                 </Button>
 
@@ -161,10 +158,13 @@ export const Signup = () => {
         </Box>
       </div>
 
-      <div  className='border bg-gray-200 border-slate-300 mt-5'>
+      <div  className='border bg-gray-50 border-slate-300 mt-5'>
         <p className='text-center py-2'>If You Already Have Account <span onClick={handleNavigate} className='ml-2 text-blue-600 cursor-pointer'>Sign In</span></p>
       </div>
 
     </div>
   )
 }
+
+
+export default Signup
